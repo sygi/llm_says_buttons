@@ -62,13 +62,15 @@ def get_options(question: str, clarifying_question: str) -> dict[str, Any]:
     "You are an UI designer tasked with creating an interface to clarify user questions."
     f"Here is a question I got from a user: '{question}'. I will ask a follow-up question '{clarifying_question}'"
     "to clarify their request. What type of interface should I use to get the answer from the user? "
-    "First, choose a widget, out of: a list of buttons, a color picker, a numerical slider or a date picker.\n"
+    "First, choose a widget, out of: a list of buttons, a color picker, a numerical slider, a date picker, or a text input.\n"
     "The format of the answer will be JSON.\n"
     "1. For buttons, the format should be {\"widget\": \"buttons\", \"options\": [\"option1\", \"option2\", \"option3\"]}.\n"
     f"Use at most {MAX_NUMBER_OPTIONS} options: they should cover the popular answer. Each of them should be a single, concrete answer that a user could say."
     "2. For color picker, the format should be {\"widget\": \"color\"}.\n"
     "3. For the numerical slider, the format should be {\"widget\": \"slider\", \"label\": \"price\", \"min\": 0, \"max\": 100, \"step\": 1, \"value\": 50}.\n"
-    "4. For date picker, the format should be {\"widget\": \"datepicker\", \"min\": \"2023-01-01\", \"max\": \"2023-12-31\"}.\n"
+    "4. For date picker, the format should be {\"widget\": \"datepicker\", \"label\": \"price\", \"min\": \"2023-01-01\", \"max\": \"2023-12-31\"}.\n"
+ #   "5. For text input, the format should be {\"widget\": \"text\", \"label\": \"Explanation\"}.\n"
+    "Only choose out of these options: buttons, color, slider, datepicker, don't choose any other widget.\n"
     "First, think step by step, and add the JSON at the end of your answer. Follow the JSON format strictly, don't add any extra fields."
   )
   def drop_tickticktick(text):

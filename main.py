@@ -89,6 +89,10 @@ for round in range(MAX_NUMBER_QUESTIONS):
         widgets.handle_buttons(widget_info["options"], round)
     elif widget_info["widget"] == "slider":
         widgets.handle_slider(widget_info, round)
+    elif widget_info["widget"] == "datepicker":
+        widgets.handle_date_picker(widget_info, round)
+    elif "text" in widget_info["widget"]:
+        widgets.handle_text_input(widget_info, round)
 
 
 # given clarifying questions and answers, get gemini to produce a final response
