@@ -61,8 +61,8 @@ def get_options(question: str, clarifying_question: str) -> dict[str, Any]:
   follow_up = (
     "You are an UI designer tasked with creating an interface to clarify user questions."
     f"Here is a question I got from a user: '{question}'. I will ask a follow-up question '{clarifying_question}'"
-    "to clarify their request. What type of interface should I use to get the answer from the user? "
-    "First, choose a widget, out of: a list of buttons, a color picker, a numerical slider, a date picker, or a text input.\n"
+    "to clarify their request. What type of interface should I use to get the answer in a user-friendly way? "
+    "First, choose a widget, out of: a list of buttons, a color picker, a numerical slider, a date picker.\n"
     "The format of the answer will be JSON.\n"
     "1. For buttons, the format should be {\"widget\": \"buttons\", \"options\": [\"option1\", \"option2\", \"option3\"]}.\n"
     f"Use at most {MAX_NUMBER_OPTIONS} options: they should cover the popular answer. Each of them should be a single, concrete answer that a user could say."
