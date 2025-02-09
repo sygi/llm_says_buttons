@@ -8,7 +8,7 @@ import google.generativeai as genai
 MAX_NUMBER_OPTIONS = 5
 
 def set_up_llms():
-  small_llm_list = ["gemini-1.5-flash-8b", "gemini-1.5-flash"]
+  small_llm_list = ["gemini-1.5-flash-8b"]
   # "gemini-2.0-flash-exp" has a small tier 1 quota
   big_llm_list = ["gemini-1.5-pro"]
   model = genai.GenerativeModel(random.choice(small_llm_list))
